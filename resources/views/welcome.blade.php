@@ -80,7 +80,7 @@
 <body class="font-sans antialiased bg-gray-900 px-12">
 
 <div id="race_panel" style="display: none;" class="relative">
-    <h2 class="text-center text-3xl font-medium py-2 mb-6 mt-6 text-white">First to 50 clicks wins! Get clicking!</h2>
+    <h2 class="text-center text-3xl font-medium py-2 mb-6 mt-6 text-white">First to 100 clicks wins! Get clicking!</h2>
 
     <img src="{{ asset('img/cat.png') }}" class="image-animation mx-auto fixed top-1/3 left-1/3 hidden " id="cat">
 
@@ -118,7 +118,7 @@
             document.getElementById('user_clicks_{!! $user->id !!}').innerHTML = e.user.clicks;
 
             // play the mp3 sound when the user reaches 5 clicks
-            if (e.user.clicks >= 50) {
+            if (e.user.clicks >= 100) {
                 var audio = new Audio('{{ asset('mp3/wow.mp3') }}');
                 audio.play();
 
