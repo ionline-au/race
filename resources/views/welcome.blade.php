@@ -109,8 +109,11 @@
 
     // loop the channels for each user, listen for the events being broadcast
     @foreach($all_users as $user)
+    console.log(123);
         Echo.channel(`user.${{!! $user->id !!}}`)
         .listen('UserClickedEvent', (e) => {
+
+            console.log(e);
 
             // increment the number of clicks
             document.getElementById('user_clicks_{!! $user->id !!}').innerHTML = e.user.clicks;
