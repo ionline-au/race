@@ -3,7 +3,7 @@
         <div class="container mx-auto text-center py-12 text-xl">
             <div>Recording Clicks For : {{ ucwords(auth()->user()->name) }}</div>
 
-            @if($user->clicks < 5)
+            @if($user->clicks < 50)
                 <button type="button" wire:click="increment" value="Increment" class="p-2 px-6 my-6 border bg-gray-300">CLICK ME!</button><br>
             @endif
 
