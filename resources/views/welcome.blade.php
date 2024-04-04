@@ -95,7 +95,7 @@
 </div>
 
 <div id="user_panel" style="display: block;">
-    <h2 class="text-center text-3xl font-medium py-2 mb-6 text-white">Jump on your phones or laptops to start<br>Head on over to race.ionline.com.au!<br>Click your name below to start!<br></h2>
+    <h2 class="text-center text-3xl font-medium py-2 mb-6 text-white">Jump on your phones or laptops to start<br>Head on over to race.ionline.com.au!<br>Click your name below to start!<br>First to 100 clicks wins! Get clicking!</h2>
     @foreach($all_users as $user)
         <div>
             <div class="container mx-auto text-center py-2 m-0 bg-gray-500 border mb-2 text-xl font-medium">
