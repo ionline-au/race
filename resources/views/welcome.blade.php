@@ -109,7 +109,6 @@
 
     // loop the channels for each user, listen for the events being broadcast
     @foreach($all_users as $user)
-    console.log(123);
         Echo.channel(`user.${{!! $user->id !!}}`)
         .listen('UserClickedEvent', (e) => {
 
@@ -119,7 +118,7 @@
             document.getElementById('user_clicks_{!! $user->id !!}').innerHTML = e.user.clicks;
 
             // play the mp3 sound when the user reaches 5 clicks
-            if (e.user.clicks >= 5) {
+            if (e.user.clicks >= 50) {
                 var audio = new Audio('{{ asset('mp3/wow.mp3') }}');
                 audio.play();
 
