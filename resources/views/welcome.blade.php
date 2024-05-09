@@ -80,7 +80,7 @@
 <body class="font-sans antialiased bg-gray-900 px-12">
 
 <div id="race_panel" style="display: none;" class="relative">
-    <h2 class="text-center text-3xl font-medium py-2 mb-6 mt-6 text-white">First to 50 clicks wins! Get clicking!</h2>
+    <h2 class="text-center text-3xl font-medium py-2 mb-6 mt-6 text-white">First to 100 clicks wins! Get clicking!</h2>
 
     <img src="{{ asset('img/cat.png') }}" class="image-animation mx-auto fixed top-1/3 left-1/3 hidden " id="cat">
 
@@ -95,7 +95,7 @@
 </div>
 
 <div id="user_panel" style="display: block;">
-    <h2 class="text-center text-3xl font-medium py-2 mb-6 text-white">Jump on your phones<br>Click your name below to start!<br></h2>
+    <h2 class="text-center text-3xl font-medium py-2 mb-6 text-white">Jump on your phones or laptops to start<br>Head on over to race.ionline.com.au!<br>Click your name below to start!<br>First to 100 clicks wins! Get clicking!</h2>
     @foreach($all_users as $user)
         <div>
             <div class="container mx-auto text-center py-2 m-0 bg-gray-500 border mb-2 text-xl font-medium">
@@ -112,11 +112,13 @@
         Echo.channel(`user.${{!! $user->id !!}}`)
         .listen('UserClickedEvent', (e) => {
 
+            console.log(e);
+
             // increment the number of clicks
             document.getElementById('user_clicks_{!! $user->id !!}').innerHTML = e.user.clicks;
 
             // play the mp3 sound when the user reaches 5 clicks
-            if (e.user.clicks >= 5) {
+            if (e.user.clicks >= 100) {
                 var audio = new Audio('{{ asset('mp3/wow.mp3') }}');
                 audio.play();
 
